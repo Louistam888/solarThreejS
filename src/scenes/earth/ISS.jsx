@@ -5,7 +5,7 @@ import { useFrame } from "@react-three/fiber";
 const ISS = () => {
   const issRef = useRef();
   const memoizedISS = useMemo(() => {
-    return useGLTF("./public/ISSmodel/ISS_stationary.gltf");
+    return useGLTF("ISSmodel/ISS_stationary.gltf");
   });
   
   const xAxis = 2

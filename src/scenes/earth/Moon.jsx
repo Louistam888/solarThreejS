@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const Moon = () => {
   const moonRef = useRef();
-  const [moonTexture] = useTexture(["./public/assets/moonTexture.jpg"]);
+  const [moonTexture] = useTexture(["assets/moonTexture.jpg"]);
 
   const xAxis = 4;
 

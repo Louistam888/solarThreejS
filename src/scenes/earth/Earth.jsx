@@ -8,10 +8,10 @@ const Earth = ({ displacementScale }) => {
   const earthRef = useRef();
   const [earthTexture, earthNormalMap, earthSpecularMap, earthDisplacementMap] =
     useTexture([
-      "./public/assets/earthDay.jpg",
-      "./public/assets/earthNormal.jpg",
-      "./public/assets/earthSpecular.jpg",
-      "./public/assets/earthDisplacement.jpg",
+      "assets/earthDay.jpg",
+      "assets/earthNormal.jpg",
+      "assets/earthSpecular.jpg",
+      "assets/earthDisplacement.jpg",
     ]);
 
   useFrame(() => {
