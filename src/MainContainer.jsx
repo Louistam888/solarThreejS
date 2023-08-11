@@ -1,4 +1,4 @@
-import { OrbitControls, useHelper } from "@react-three/drei";
+import { useHelper } from "@react-three/drei";
 import AnimatedStars from "./AnimatedStars";
 import Earth from "../public/assets/Earth";
 import { useRef } from "react";
@@ -8,13 +8,13 @@ const MainContainer = () => {
   const directionalLightRef = useRef();
   const directionalLightRefTwo = useRef();
   //   number is size of helper
-  useHelper(directionalLightRef, THREE.DirectionalLightHelper, 1, "hotpink");
-  useHelper(directionalLightRefTwo, THREE.DirectionalLightHelper, 1, "hotpink");
+//   useHelper(directionalLightRef, THREE.DirectionalLightHelper, 1, "hotpink");
+//   useHelper(directionalLightRefTwo, THREE.DirectionalLightHelper, 1, "hotpink");
 
   return (
     <>
       <color attach="background" args={["black"]} />
-      <OrbitControls />
+    
       <AnimatedStars />
       <directionalLight
         ref={directionalLightRef}
@@ -23,7 +23,7 @@ const MainContainer = () => {
         // color={0xff0000}
       />
       <directionalLight ref={directionalLightRefTwo} position={[0, 0, -10]} />
-      <Earth />
+      <Earth displacementScale={0.15}/>
     </>
   );
 };
